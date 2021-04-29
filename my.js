@@ -66,7 +66,6 @@
 				if (xhr.status >= 200 && xhr.status < 300 || qq.status === 304)
 				{
 					d = JSON.parse(xhr.responseText);
-					console.log(d);
 					fn();
 				}
 			}
