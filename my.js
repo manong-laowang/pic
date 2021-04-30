@@ -65,8 +65,8 @@
 			{
 				if (xhr.status >= 200 && xhr.status < 300 || qq.status === 304)
 				{
-					d = JSON.parse(xhr.responseText);
-					fn();
+					var d = JSON.parse(xhr.responseText);
+					fn(d);
 				}
 			}
 		};
@@ -83,8 +83,6 @@
 	
 /*
 //ajax调用说明
-//先定义一个变量d保存服务器返回数据
-var d=null;
     myjs.ajax({
 				 //请求地址
 				 url:"hpjy.json",
@@ -94,8 +92,8 @@ var d=null;
 				 async:true,
 				 //请求参数，没有参数请省略
 				data:{name:"小明",let:123456,pow:123},
-				 //请求成功后需要执行的脚本
-				 success:function() {
+				 //请求成功后需要执行的脚本,参数d为服务器返回数据
+				 success:function(d) {
 					 
 				 }
 			 });
