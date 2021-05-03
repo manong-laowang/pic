@@ -59,7 +59,7 @@
 		if (method === "get" && datas != "")
 		{
 			url = url + "?" + datas;
-			tatas=null;
+			datas=null;
 		}   
 
 		xhr.onreadystatechange = function() {
