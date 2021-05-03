@@ -50,7 +50,7 @@
 		if (data && JSON.stringify(data) != "{}")
 		{
 			for(var i in data){
-				datas = datas + i + data[i] + "&";
+				datas = datas + i +"="+ data[i] + "&";
 			}
 			datas = datas.replace(/&$/, "");
 		}
