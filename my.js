@@ -46,6 +46,7 @@
 			async=typeof(obj.async) === "boolean" ?obj.async: true,
 			data=obj.data,
 			datas="",
+			//datas2=tatas,
 			fn=obj.success;
 		if (data && JSON.stringify(data) != "{}")
 		{
@@ -58,6 +59,7 @@
 		if (method === "get" && datas != "")
 		{
 			url = url + "?" + datas;
+			tatas=null;
 		}   
 
 		xhr.onreadystatechange = function() {
